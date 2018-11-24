@@ -5,7 +5,7 @@ public class TestClass {
         Scanner s = new Scanner(System.in);
         TestClass tc = new TestClass();
         int num = Integer.parseInt(s.nextLine()); 
-        for ( int j = 0; j < num; j++ ) {
+        for ( int j = 0; j < num; j++ )  {
             String str = s.nextLine();
             boolean isPalindrome = false;
             for (int k = 0; k < str.length(); k++) {
