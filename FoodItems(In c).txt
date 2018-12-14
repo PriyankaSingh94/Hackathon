@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello, World!\n");
+    int N, K, m, n, p, expire = 1, vans;
+    scanf("%d %d %d %d %d", &N, &K, &m, &n, &p);
+    printf("%d %d %d %d %d \n", N, K, m, n, p);
+    vans = m;
+    while (expire) {
+        int availItems = N;
+        expire = 0;
+        while (availItems > (m * n)) {
+            availItems = availItems - (m * n) - K;
+            expire = expire+K;
+        }
+        if (expire > p ) {
+            m++;
+        }
+        else {
+            expire = 0;
+            printf("Additional vans to be bought - %d", m - vans);
+        }
+    }
+    return 0;
+}
